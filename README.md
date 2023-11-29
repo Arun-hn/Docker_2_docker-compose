@@ -8,6 +8,11 @@ change host to ec2-public-ip in index.html and
 docker build -t my-app .
 
 then my-app image built,
-Now run 
 
+
+Now run 
 docker-compose up
+
+or 
+to run the containers in detach mode
+docker-compose up -d
