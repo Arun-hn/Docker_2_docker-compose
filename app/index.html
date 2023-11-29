@@ -46,8 +46,7 @@
 </style>
 <script>
     (async function init() {
-        const baseUrl = window.location.origin; // Get the base URL dynamically
-        const response = await fetch(`${baseUrl}/get-profile`);
+        const response = await fetch('http://localhost:3000/get-profile');
         console.log("response", response);
         const user = await response.json();
         console.log(JSON.stringify(user));
@@ -61,7 +60,6 @@
     })();
 
     async function handleUpdateProfileRequest() {
-        const baseUrl = window.location.origin; // Get the base URL dynamically
         const contEdit = document.getElementById('container-edit');
         const cont = document.getElementById('container');
 
@@ -71,7 +69,7 @@
             interests: document.getElementById('input-interests').value
         };
         
-        const response = await fetch(`${baseUrl}/update-profile`, {
+        const response = await fetch('http://localhost:3000/update-profile', {
             method: "POST",
             headers: {
               'Accept': 'application/json',
@@ -101,7 +99,6 @@
         contEdit.style.display = 'block';
     }
 </script>
-
 <body>
     <div class='container' id='container'>
         <h3> <marquee behavior="scroll" direction="right" scrollamount="12">This Page is created by Arun H N </marquee> 
