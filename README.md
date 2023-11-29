@@ -10,4 +10,4 @@ docker build -t my-app .
 then my-app image built,
 Now run 
 
-docker-compose-up
+docker-compose up
